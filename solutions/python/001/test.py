@@ -12,10 +12,6 @@ class TestCircle(unittest.TestCase):
   def test_circle_color(self):
     self.assertEqual(self.circle.color, "red")
 
-  def test_circle_color(self):
-    self.assertEqual(self.circle.color, "red")
-
-
 class TestCircleOverloading(unittest.TestCase):
   def setUp(self):
     self.radius = 2.0
