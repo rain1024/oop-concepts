@@ -1,0 +1,25 @@
+                            THE CIRCLE CLASS
+==============================================================================
+A class called circle is designed as shown in the following class diagram.
+
+It contains:
+- Two private instance variables:
+  radius (of type double) and color (of type String), with default value of 1.0
+  and "red", respectively.
+- Two overloaded constructors;
+- Two public methods: getRadius() and getArea().
+
+
+                                  UML
+==============================================================================
+╔═══════════════════╗
+║       Circle      ║
+╠═══════════════════╣
+║- radius = 1.0     ║
+║- color = "red"    ║
+╠═══════════════════╣
+║+ Circle()         ║
+║+ Circle(radius)   ║
+║+ getRadius()      ║
+║+ getArea()        ║
+╚═══════════════════╝
