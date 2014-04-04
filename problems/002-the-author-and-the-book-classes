@@ -1,0 +1,75 @@
+==============================================================================
+                      THE AUTHOR AND THE BOOK CLASSES
+==============================================================================
+A class called Author is designed as shown in the class diagram. It contains:
+  - Three private instance variables: name (String), email (String), and gender
+    (char of either 'm' or 'f');
+  - One constructor to initialize the name, email and gender with the given
+    values; public Author (String name, String email, char gender) {......}
+    (There is no default constructor for Author, as there are no defaults for
+    name, email and gender.)
+  - public getters/setters: getName(), getEmail(), setEmail(), and getGender();
+    (There are no setters for name and gender, as these attributes cannot be
+    changed.)
+  - A toString() method that returns "author-name (gender) at email", e.g., 
+    "Tan Ah Teck (m) at ahTeck@somewhere.com".
+
+A class called Book is designed as shown in the class diagram. It contains:
+  - Four private instance variables: name (String), author (of the class Author
+    you have just created, assume that each book has one and only one author),
+    price (double), and qtyInStock (int);
+  - Two constructors:
+    public Book (String name, Author author, double price) {...}
+    public Book (String name, Author author, double price, int qtyInStock) {...}
+  - public methods getName(), getAuthor(), getPrice(), setPrice(),
+    getQtyInStock(), setQtyInStock().
+  - toString() that returns "'book-name' by author-name (gender) at email".
+    (Take note that the Author's toString() method returns "author-name (gender)
+    at email".)
+
+Take note that both Book and Author classes have a variable called name.
+However, it can be differentiated via the referencing instance. For a Book
+instance says aBook, aBook.name refers to the name of the book; whereas for an
+Author's instance say auAuthor, anAuthor.name refers to the name of the author.
+There is no need (and not recommended) to call the variables bookName and
+authorName.
+
+==============================================================================
+                                  UML
+==============================================================================
+╔═══════════════════════════════╗ 1                                            
+║      Author                   ║ ————————————————————————┐                                               
+╠═══════════════════════════════╣                         │                   
+║- name                         ║                         │                    
+║- email                        ║                         │                    
+║- email                        ║                         │                    
+║- gender                       ║                         │                 
+╠═══════════════════════════════╣                         │              
+║+ Author(name, email, gender)  ║                         │           
+║+ getName()                    ║                         │                           
+║+ getEmail()                   ║                         │                       
+║+ getGender()                  ║                         │                        
+║+ toString()                   ║                         │                        
+╚═══════════════════════════════╝                         │                        
+╔═════════════════════════════════════════╗               │                                  
+║                 Book                    ║               │                     
+╠═════════════════════════════════════════╣               │                                        
+║- name                                   ║               │                                           
+║- author: Author                         ║ ◊—————————————┘
+║- price                                  ║                                           
+║- qtyInStock                             ║                                    
+╠═════════════════════════════════════════╣                                    
+║+ Book(name, author, price)              ║                                    
+║+ Book(name, author, price, qtyInStock)  ║                                    
+║+ getName()                              ║                                    
+║+ getAuthor()                            ║                                    
+║+ getPrice()                             ║                                    
+║+ setPrice(price)                        ║                                    
+║+ getQtyInStock()                        ║                                    
+║+ setQtyInStock(price)                   ║                                    
+╚═════════════════════════════════════════╝                                    
+
+==============================================================================
+                            Related Concepts
+==============================================================================
+Class, Composite
